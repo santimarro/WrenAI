@@ -88,7 +88,7 @@ export default function HomeThread() {
 
   const [createViewMutation, { loading: creating }] = useCreateViewMutation({
     onError: (error) => console.error(error),
-    onCompleted: () => message.success('Successfully created view.'),
+    onCompleted: () => message.success('Vista creada correctamente.'),
   });
 
   const { data, updateQuery: updateThreadQuery } = useThreadQuery({
@@ -116,7 +116,7 @@ export default function HomeThread() {
     useUpdateThreadResponseMutation({
       onError: (error) => console.error(error),
       onCompleted: (data) => {
-        message.success('Successfully updated the SQL statement');
+        message.success('Declaración SQL actualizada correctamente');
         // trigger generate answer after sql statement updated
         onGenerateThreadResponseAnswer(data.updateThreadResponse.id);
       },
@@ -168,7 +168,7 @@ export default function HomeThread() {
       awaitRefetchQueries: true,
       onError: (error) => console.error(error),
       onCompleted: () => {
-        message.success('Successfully created question-sql pair.');
+        message.success('Par pregunta-SQL creado correctamente.');
       },
     });
 

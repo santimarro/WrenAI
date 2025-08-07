@@ -208,17 +208,17 @@ export default function TextBasedAnswer(props: AnswerResultProps) {
       <div className="text-md gray-10 py-4 px-6">
         <div className="text-right mb-4">{adjustAnswerDropdown}</div>
         <MarkdownBlock content={textAnswer} />
-        {isStreaming && <LoadingOutlined className="geekblue-6" spin />}
+        {isStreaming && <LoadingOutlined className="green-6" spin />}
         {status === ThreadResponseAnswerStatus.INTERRUPTED && (
           <div className="mt-2 text-right">
             <Button
               icon={<ReloadOutlined />}
               size="small"
               type="link"
-              title="Regenerate answer"
+              title="Regenerar respuesta"
               onClick={onRegenerateAnswer}
             >
-              Regenerate
+              Regenerar
             </Button>
           </div>
         )}

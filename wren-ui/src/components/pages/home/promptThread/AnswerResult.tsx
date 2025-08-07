@@ -93,7 +93,7 @@ const StyledTabs = styled(Tabs)`
       }
 
       [aria-label='code'] {
-        color: var(--geekblue-5);
+        color: var(--green-5);
       }
 
       [aria-label='pie-chart'] {
@@ -101,8 +101,8 @@ const StyledTabs = styled(Tabs)`
       }
 
       .adm-beta-tag {
-        background-color: var(--geekblue-2);
-        color: var(--geekblue-5);
+        background-color: var(--green-2);
+        color: var(--green-5);
       }
     }
 
@@ -129,10 +129,10 @@ const QuestionTitle = (props) => {
   const { question, className } = props;
   return (
     <Title
-      className={clsx('d-flex bg-gray-1 rounded mt-0', className)}
+      className={clsx('d-flex bg-green-1 rounded mt-0', className)}
       level={4}
     >
-      <MessageOutlined className="geekblue-5 mt-1 mr-3" />
+      <MessageOutlined className="green-5 mt-1 mr-3" />
       <Text className="text-medium gray-8">{question}</Text>
     </Title>
   );
